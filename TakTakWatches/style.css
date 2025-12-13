@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+*{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+    padding: 0 20px;
+    background-color: white;
+    box-shadow: 1px 1px hsl(0, 0%, 90%);
+}
+.navlinks{
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+.navlinks a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight:500;
+}
+.hero{
+
+    background-image: url('background.jpg');
+    height: 90vh;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.hero-text{
+    padding: 100px 100px;
+}
+.hero h1{
+    font-size: 60px;
+}
+.hero h3{
+    margin-top: 20px;
+    font-size: 30px;
+}
+.hero-text button{
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.hero-text button:hover{
+    background-color: white;
+    color: black;
+    border: black;
+    transition: all 0.5s ease-in-out;}
+    
+/* Catalogue Section */
+.catalogue {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.catalogue h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: all 0.5s ease-in-out
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h4 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.catalogue-btn {
+    margin-top: 30px;
+}
+
+.catalogue-btn button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.catalogue-btn button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: 1px solid black;
+    transition: all 0.5s ease-in-out;}
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    background-color: #010100;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-container img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    width: 60%;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: gray;
+    margin-bottom: 15px;
+}
+.footer {
+    padding: 40px 0;
+    background-color: white;
+    color: #0d1117;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer li {
+    display: inline-block; /* Change to inline-block for horizontal layout */
+    padding: 0 10px;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul a:hover {
+    opacity: 1;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer .social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer .social > a:hover {
+    opacity: 0.9;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+}
+.footer .footer-break{
+  height:2px;
+  border-width:0;
+  color:gray;
+  background-color:white
+    }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+
+.container {
+    
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-section {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-header {
+  margin-bottom: 40px;
+}
+
+.login-header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.form-group {
+margin-top:25px ;
+  margin-bottom: 25px;
+}
+.submit-btn {
+    background: #0B0B0B;
+    color: white;
+    border: none;
+    border: 1px solid white;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f8f8f8;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    resize: none;
+    border: none;
+    height: 50px;
+    background: #f8f8f8;
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.forgot-password a {
+  color: #4444ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+
+
+.submit-btn:hover {
+  background: #ddd;
+  border: 1px solid #0B0B0B;
+    color: #0B0B0B;
+}
+
+.alternative-login {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.alternative-login p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+sup{
+    color:green
+}
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.social-btn:hover {
+  background: #eeeeee;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.create-account {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.create-account a {
+  color: #4444ff;
+  text-decoration: none;
+}
+
+
+/* Buttons */
+.card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+/* View Product Button */
+.btn-view {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-view:hover {
+    background-color: white;
+    color: rgb(20, 19, 19);
+    border: 1px solid black;
+}
+
+/* Out of Stock Button */
+.btn-out {
+    background-color: #ccc;
+    color: #555;
+    cursor: not-allowed;
+}
+
+.btn-out:hover {
+    background-color: #ccc; /* No hover effect for disabled state */
+    cursor: not-allowed;
+}
+.gold{
+    color:gold;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid gold ;
+    border-radius: 5px ;
+    margin-top: 10px;
+    cursor: pointer;
+    padding:10px;
+}
+.silver{
+    color: silver ;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid silver ;
+    border-radius: 5px ;
+    margin-top: 10px;
+    padding:10px;
+    cursor: pointer;
+}
+.black{
+    color: black ;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black ;
+    cursor: pointer;
+    border-radius: 5px ;
+    margin-top: 10px;
+    padding:10px;
+}
+.cart-button{
+    width: 100%;
+    background-color: green;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+.add-to-cart{
+    margin-top: 10px;
+}
+.navlinks a:hover{
+    color: hsl(0, 0%, 30%);
+    transition: all 0.3s ease-in-out
+}
