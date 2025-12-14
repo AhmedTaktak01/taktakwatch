@@ -1,51 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taktak Watches</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Connexion - Taktak Watches</title>
     <link rel="icon" type="image/x-icon" href="Logo.png">
-
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/013baba51d.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </head>
 <body>
+    <!-- En-tête avec navigation -->
     <header>
-        <div class="navlinks">
-            <a href="index.html">Home</a>
-            <a href="./index.html#products">Products</a>
-            <a href="./login.html">Account</a>
-            <a href="./contact.html">Contact</a>
-        </div>
+        <nav>
+            <div class="navlinks">
+                <img src="Logo.png" alt="Logo Taktak Watches" width="50px">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#products">Produits</a>
+                <a href="login.html">Compte</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
     </header>
-    <div class="background-login">
-    <div class="container">
-        <div class="image-section">
-          <img src="Logo.png" alt="African woman in headwrap">
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="container">
+            <!-- Section image -->
+            <section class="image-section">
+                <img src="background.jpg" alt="Image de connexion élégante">
+            </section>
+            
+            <!-- Section formulaire de connexion -->
+            <section class="login-section">
+                <div class="login-header">
+                    <h1>Connexion</h1>
+                    <p>Bienvenue! Connectez-vous à votre compte</p>
+                </div>
+                
+                <!-- Formulaire avec validation JavaScript -->
+                <form onsubmit="return login();" method="post" action="#">
+                    <!-- Champ Nom d'utilisateur -->
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="Entrez votre nom d'utilisateur"
+                            required>
+                    </div>
+                    
+                    <!-- Champ Mot de passe -->
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Entrez votre mot de passe"
+                            required>
+                    </div>
+                    
+                    <!-- Lien mot de passe oublié -->
+                    <div class="forgot-password">
+                        <a href="#reset">Mot de passe oublié?</a>
+                    </div>
+                    
+                    <!-- Bouton de soumission -->
+                    <button type="submit" class="submit-btn">Se Connecter</button>
+                </form>
+                
+                <!-- Connexion alternative via réseaux sociaux -->
+                <article class="alternative-login">
+                    <p>Ou connectez-vous avec</p>
+                    <div class="social-login">
+                        <!-- Lien externe Facebook -->
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Se connecter avec Facebook">
+                            <i class="fa-brands fa-facebook" style="font-size: 20px; color: #1877f2;"></i>
+                        </a>
+                        <!-- Lien externe Google -->
+                        <a href="https://www.google.com" target="_blank" rel="noopener" class="social-btn" aria-label="Se connecter avec Google">
+                            <i class="fa-brands fa-google" style="font-size: 20px; color: #db4437;"></i>
+                        </a>
+                        <!-- Lien externe Twitter -->
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" class="social-btn" aria-label="Se connecter avec Twitter">
+                            <i class="fa-brands fa-twitter" style="font-size: 20px; color: #1da1f2;"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Lien vers création de compte -->
+                <div class="create-account">
+                    <p>Pas encore de compte? <a href="signup.html">Créer un compte</a></p>
+                </div>
+
+                <!-- Ancre vers le haut de la page -->
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="#top" style="color: gold; text-decoration: none;">↑ Retour en haut</a>
+                </div>
+            </section>
         </div>
-        <div class="login-section">
-          <div class="login-header">
-            <h1>LOG IN</h1>
-          </div>
-          <form id="login-form" method="post" onsubmit="return login()">
-            <div class="form-group">
-              <label for="username">User name</label>
-              <input type="text" id="username" name="username" >
+
+        <!-- Section avantages du compte -->
+        <section style="padding: 50px 20px; background-color: #f9f9f9;">
+            <h2 style="text-align: center; margin-bottom: 30px;">Avantages d'un Compte Taktak</h2>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+                <article style="background: white; padding: 30px; border-radius: 8px; flex: 1; min-width: 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <i class="fa-solid fa-truck" style="font-size: 40px; color: gold; margin-bottom: 15px;"></i>
+                    <h3>Livraison Suivie</h3>
+                    <p>Suivez vos commandes en temps réel</p>
+                </article>
+                <article style="background: white; padding: 30px; border-radius: 8px; flex: 1; min-width: 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <i class="fa-solid fa-gift" style="font-size: 40px; color: gold; margin-bottom: 15px;"></i>
+                    <h3>Offres Exclusives</h3>
+                    <p>Accédez à des promotions réservées aux membres</p>
+                </article>
+                <article style="background: white; padding: 30px; border-radius: 8px; flex: 1; min-width: 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <i class="fa-solid fa-heart" style="font-size: 40px; color: gold; margin-bottom: 15px;"></i>
+                    <h3>Liste de Souhaits</h3>
+                    <p>Sauvegardez vos montres préférées</p>
+                </article>
             </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" >
-            </div>
-      
-            <button type="submit" class="submit-btn">SUBMIT</button>
-          </form>
-          <div class="create-account">
-            <a href="./signup.html">Create an Account</a>
-          </div>
-          
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer" role="contentinfo">
+        <div class="social">
+            <h3 class="sr-only">Suivez-nous</h3>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
         </div>
-      </div>
-    </div>
+        <hr class="footer-break">
+        <ul class="footer-links">
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="products.html">PRODUITS</a></li>
+            <li><a href="login.html">COMPTE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <p class="copyright">© 2025 Taktak Watches. Tous droits réservés</p>
+    </footer>
 </body>
 </html>

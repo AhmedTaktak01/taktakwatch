@@ -1,98 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taktak Watches</title>
+    <title>Taktak Watches - Accueil</title>
     <link rel="icon" type="image/x-icon" href="Logo.png">
-
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/013baba51d.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    
+    <!-- CSS interne requis pour le projet -->
+    <style>
+        /* Style spécifique pour la page d'accueil */
+        .highlight-text {
+            background: linear-gradient(90deg, gold, silver);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        
+        /* Animation pour les cartes de produits */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+    </style>
 </head>
 <body>
+    <!-- En-tête du site avec navigation -->
     <header>
         <nav>
-        <div class="navlinks">
-            <img src="Logo.png" alt="Logo" width="50px">
-            <a href="index.html">Home</a>
-            <a href="./index.html#products">Products</a>
-            <a href="./login.html">Account</a>
-            <a href="./contact.html">Contact</a>
-        </div>
+            <div class="navlinks">
+                <img src="Logo.png" alt="Logo Taktak Watches" width="50px">
+                <a href="index.html">Accueil</a>
+                <a href="#products">Produits</a>
+                <a href="login.html">Compte</a>
+                <a href="contact.html">Contact</a>
+                <!-- Lien externe requis -->
+                <a href="https://en.wikipedia.org/wiki/Rolex" target="_blank" rel="noopener">Wiki</a>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Time is money,<br> so why not spend it wisely?</h1>
-            <h3>Discover our collection of watches</h3>
-            <div class="hero-btn">
-            <a href="#products"><button>ORDER NOW</button></a>
-        </div>
-        </div>
-    </div>
-
-    <!-- Catalogue Section -->
-    <section class="catalogue" id="products">
-        <h2>Our Collection</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="watch1.jpg" alt="Watch 1">
-                <h4>ENZO BRO-BLACK</h4>
-                <p>260,100 TND<sup>-10%</sup></p>
-            </div>
-            <div class="card">
-                <img src="watch2.png" alt="Watch 2">
-                <h4>Daniel Wellington</h4>
-                <p>631,59 TND</p>
-            </div>
-            <div class="card">
-                <img src="watch3.png" alt="Watch 3">
-                <h4>Rolex Sea-Dweller</h4>
-                <p>2663,52 TND</p>
-            </div>
-        </div>
-        <div class="catalogue-btn">
-            <a href="products.html"><button>VIEW ALL PRODUCTS</button></a>
-        </div>
-    </section>
-        <!-- About Us Section -->
-        <section class="about-us">
-            <div class="about-container">
-                <img src="LogoInverted.png " alt="About Us">
-                <div class="about-text">
-                    <h2>About Us</h2>
-                    <p>
-                        At Taktak Watches, we believe time is precious, and so is your style. 
-                        Our mission is to provide high-quality watches that combine elegance, functionality, and affordability. 
-                        With a keen eye for craftsmanship and detail, our collection offers something for everyone, 
-                        whether you seek a timeless classic, luxury design, or sporty modern flair. 
-                    </p>
-                    <p>
-                        Experience precision and sophistication like never before. Join our community of watch enthusiasts 
-                        who know the value of time.
-                    </p>
+    <!-- Contenu principal de la page -->
+    <main>
+        <!-- Section Hero -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Le temps c'est de l'argent,<br> alors pourquoi ne pas le dépenser judicieusement?</h1>
+                <h3>Découvrez notre <span class="highlight-text">collection exceptionnelle</span> de montres</h3>
+                <div class="hero-btn">
+                    <a href="#products"><button>COMMANDER MAINTENANT</button></a>
                 </div>
             </div>
         </section>
-        <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-            <div class="social" role="navigation" aria-labelledby="social-heading">
-                <h3 id="social-heading" class="sr-only">Follow us on social media</h3>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+        <!-- Section Catalogue de produits -->
+        <section class="catalogue" id="products">
+            <h2>Notre Collection</h2>
+            <div class="card-container">
+                <!-- Carte produit 1 -->
+                <article class="card">
+                    <img src="watch1.jpg" alt="Montre ENZO BRO-BLACK">
+                    <h4>ENZO BRO-BLACK</h4>
+                    <p>260,100 TND<sup style="color: green;">-10%</sup></p>
+                    <a href="enzo.html"><button class="btn-view">Voir Produit</button></a>
+                </article>
+                
+                <!-- Carte produit 2 -->
+                <article class="card">
+                    <img src="watch2.png" alt="Montre Daniel Wellington">
+                    <h4>Daniel Wellington</h4>
+                    <p>631,59 TND</p>
+                    <a href="products.html#daniel"><button class="btn-view">Voir Produit</button></a>
+                </article>
+                
+                <!-- Carte produit 3 -->
+                <article class="card">
+                    <img src="watch3.png" alt="Montre Rolex Sea-Dweller">
+                    <h4>Rolex Sea-Dweller</h4>
+                    <p>2663,52 TND</p>
+                    <a href="products.html#rolex"><button class="btn-view">Voir Produit</button></a>
+                </article>
             </div>
-            <hr class="footer-break">
-            <ul class="footer-links" >
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#products">PRODUCTS</a></li>
-                <li><a href="login.html">ACCOUNT</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-            <p class="copyright">© 2025 Taktak Watches. All Rights Reserved</p>
-        </footer>
-    
+            <div class="catalogue-btn">
+                <a href="products.html"><button>VOIR TOUS LES PRODUITS</button></a>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section class="about-us" id="about">
+            <div class="about-container">
+                <img src="LogoInverted.png" alt="Logo Taktak Watches">
+                <article class="about-text">
+                    <h2>À Propos de Nous</h2>
+                    <p>
+                        Chez <strong>Taktak Watches</strong>, nous croyons que le temps est précieux, tout comme votre style. 
+                        Notre mission est de fournir des montres de haute qualité qui allient élégance, fonctionnalité et accessibilité. 
+                        Avec un œil attentif sur l'artisanat et les détails, notre collection offre quelque chose pour tout le monde.
+                    </p>
+                    <p>
+                        Découvrez la précision et la sophistication comme jamais auparavant. Rejoignez notre communauté de passionnés 
+                        qui connaissent la valeur du temps.
+                    </p>
+                    <!-- Lien ancre vers le haut de la page -->
+                    <p><a href="#top" style="color: gold; text-decoration: none;">↑ Retour en haut</a></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Informations supplémentaires avec tableau -->
+        <section class="info-section">
+            <!-- Vidéo requise pour le projet -->
+            <div class="media-section">
+                <video loop width="100%" autoplay muted>
+                    <source src="Rolex.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo HTML5.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="social" role="navigation" aria-labelledby="social-heading">
+            <h3 id="social-heading" class="sr-only">Suivez-nous sur les réseaux sociaux</h3>
+            <!-- Liens externes vers réseaux sociaux -->
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <hr class="footer-break">
+        <ul class="footer-links">
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="#products">PRODUITS</a></li>
+            <li><a href="login.html">COMPTE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <!-- Lien externe -->
+            <li><a href="https://www.rolex.com" target="_blank" rel="noopener">ROLEX OFFICIEL</a></li>
+        </ul>
+        <p class="copyright">© 2025 Taktak Watches. Tous droits réservés</p>
+    </footer>
 </body>
 </html>
