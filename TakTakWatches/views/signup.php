@@ -1,0 +1,135 @@
+<?php
+// ============================================
+// Vue : Page d'inscription
+// ============================================
+$pageTitle = "Inscription - Taktak Watches";
+require __DIR__ . '/layout/header.php';
+?>
+
+        <div class="container">
+            <!-- Section image -->
+            <section class="image-section">
+                <img src="background.jpg" alt="Image d'inscription élégante">
+            </section>
+
+            <!-- Section formulaire d'inscription -->
+            <section class="login-section">
+                <div class="login-header">
+                    <h1>Créer un Compte</h1>
+                    <p>Rejoignez la communauté Taktak Watches</p>
+                </div>
+
+                <!-- Formulaire avec action vers le contrôleur -->
+                <form method="post" action="index.php?page=process_signup">
+                    <!-- Champ Nom d'utilisateur -->
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur <span style="color: red;">*</span></label>
+                        <input type="text" id="username" name="username" placeholder="Choisissez un nom d'utilisateur" minlength="3" required>
+                    </div>
+
+                    <!-- Champ Email -->
+                    <div class="form-group">
+                        <label for="email">Adresse Email <span style="color: red;">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <!-- Champ Mot de passe -->
+                    <div class="form-group">
+                        <label for="password">Mot de passe <span style="color: red;">*</span></label>
+                        <input type="password" id="password" name="password" placeholder="Minimum 6 caractères" minlength="6" required>
+                    </div>
+
+                    <!-- Case à cocher Conditions -->
+                    <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="terms" name="terms" required style="width: auto; margin: 0;">
+                        <label for="terms" style="margin: 0;">
+                            J'accepte les <a href="#terms-page" style="color: #4444ff;">conditions d'utilisation</a>
+                        </label>
+                    </div>
+
+                    <!-- Bouton de soumission -->
+                    <button type="submit" class="submit-btn">S'inscrire</button>
+                </form>
+
+                <!-- Connexion alternative via réseaux sociaux -->
+                <article class="alternative-login">
+                    <p>Ou inscrivez-vous avec</p>
+                    <div class="social-login">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="S'inscrire avec Facebook">
+                            <i class="fa-brands fa-facebook" style="font-size: 20px; color: #1877f2;"></i>
+                        </a>
+                        <a href="https://www.google.com" target="_blank" rel="noopener" class="social-btn" aria-label="S'inscrire avec Google">
+                            <i class="fa-brands fa-google" style="font-size: 20px; color: #db4437;"></i>
+                        </a>
+                        <a href="https://www.apple.com" target="_blank" rel="noopener" class="social-btn" aria-label="S'inscrire avec Apple">
+                            <i class="fa-brands fa-apple" style="font-size: 20px; color: #000;"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Lien vers connexion -->
+                <div class="create-account">
+                    <p>Déjà un compte? <a href="index.php?page=login">Se connecter</a></p>
+                </div>
+
+                <!-- Liste des étapes d'inscription -->
+                <aside style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+                    <h3 style="margin-bottom: 15px;">Étapes de l'inscription:</h3>
+                    <ol style="padding-left: 20px; line-height: 2; color: #666;">
+                        <li>Remplissez le formulaire ci-dessus</li>
+                        <li>Vérifiez votre boîte email</li>
+                        <li>Cliquez sur le lien de confirmation</li>
+                        <li>Commencez à magasiner!</li>
+                    </ol>
+                </aside>
+            </section>
+        </div>
+
+        <!-- Section pourquoi s'inscrire -->
+        <section style="padding: 50px 20px; background-color: white;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Pourquoi Créer un Compte?</h2>
+            <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <article style="background: #f9f9f9; padding: 25px; border-radius: 8px; text-align: center;">
+                    <i class="fa-solid fa-bolt" style="font-size: 50px; color: gold; margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px;">Commandes Rapides</h3>
+                    <p style="color: #666;">Vos informations sauvegardées pour un checkout ultra rapide</p>
+                </article>
+                <article style="background: #f9f9f9; padding: 25px; border-radius: 8px; text-align: center;">
+                    <i class="fa-solid fa-star" style="font-size: 50px; color: gold; margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px;">Programme de Fidélité</h3>
+                    <p style="color: #666;">Gagnez des points à chaque achat et bénéficiez de réductions</p>
+                </article>
+                <article style="background: #f9f9f9; padding: 25px; border-radius: 8px; text-align: center;">
+                    <i class="fa-solid fa-bell" style="font-size: 50px; color: gold; margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px;">Notifications</h3>
+                    <p style="color: #666;">Recevez des alertes sur les nouveautés et les promotions</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section témoignages clients -->
+        <aside style="padding: 50px 20px; background-color: #f5f5f5;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Ce Que Disent Nos Clients</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <blockquote style="background: white; padding: 25px; border-left: 4px solid gold; margin-bottom: 20px; border-radius: 8px;">
+                    <p style="font-style: italic; color: #555; margin-bottom: 10px;">
+                        "L'inscription était si simple et rapide! Maintenant je profite de toutes les offres exclusives. Je recommande!"
+                    </p>
+                    <footer style="text-align: right; color: #888;">— Med Yassine Ghorbel, Cliente depuis 2024</footer>
+                </blockquote>
+                <blockquote style="background: white; padding: 25px; border-left: 4px solid gold; margin-bottom: 20px; border-radius: 8px;">
+                    <p style="font-style: italic; color: #555; margin-bottom: 10px;">
+                        "Le programme de fidélité est génial! J'ai déjà économisé plus de 200 TND sur mes achats."
+                    </p>
+                    <footer style="text-align: right; color: #888;">— Bilel Brinsi, Client VIP</footer>
+                </blockquote>
+                <blockquote style="background: white; padding: 25px; border-left: 4px solid gold; margin-bottom: 20px; border-radius: 8px;">
+                    <p style="font-style: italic; color: #555; margin-bottom: 10px;">
+                        "J'aime beacoup la montre de Spider-Man!"
+                    </p>
+                    <footer style="text-align: right; color: #888;">— Med Ali Loussssif, Client VIP</footer>
+                </blockquote>
+            </div>
+        </aside>
+
+<?php require __DIR__ . '/layout/footer.php'; ?>

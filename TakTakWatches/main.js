@@ -72,13 +72,7 @@ function addToCart() {
     alert("✓ ENZO COLLECTION EC209 a été ajouté à votre panier!");
     
     // Optionnel: Animation du bouton après ajout
-    const cartBtn = document.querySelector('.cart-button');
-    if (cartBtn) {
-        cartBtn.style.backgroundColor = 'darkgreen';
-        setTimeout(() => {
-            cartBtn.style.backgroundColor = 'green';
-        }, 500);
-    }
+    
     
     // Dans une vraie application, on pourrait:
     // - Sauvegarder le produit dans localStorage
